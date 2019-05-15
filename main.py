@@ -46,7 +46,7 @@ def delete_user(arg):
 @app.route('/users/', methods=['POST', 'PATCH', 'DELETE'])
 def create():
   if request.method == 'POST':
-    return create_user(user_id, request.form['name'],request.form['age'])
+    return create_user(request.form['name'],request.form['age'])
 
 @app.route('/users/<user_id>', methods=['PATCH', 'DELETE'])
 def users(user_id):
