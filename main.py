@@ -2,6 +2,16 @@ import pickle
 from flask import Flask, request, Response
 
 app = Flask(__name__)
+def get_all_users():
+  return Response('{"status": "ok GET"}', status=200, mimetype='application/json')
+def create_user():
+  return Response('{"status": "ok POST"}', status=200, mimetype='application/json')
+def update_user():
+  return Response('{"status": "ok PATCH"}', status=200, mimetype='application/json')
+def delete_user():
+  return Response('{"status": "ok DELETE"}', status=200, mimetype='application/json')
+
+
 
 
 @app.route('/users/', methods=['GET', 'POST', 'PATCH', 'DELETE'])
